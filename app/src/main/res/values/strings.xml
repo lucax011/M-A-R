@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">MAR</string>
+    <string name="app_name">Urban Drive</string>
+    <string name="app_confirm">Confirmar</string>
+    <string name="app_login">Login</string>
+    <string name="app_nome">Nome</string>
+    <string name="app_email">E-mail</string>
+    <string name="app_register">Register</string>
+    <string name="app_request">Home</string>
+    <string name="app_password">Senha</string>
+    <string name="button_More">Saiba mais</string>
 </resources>
