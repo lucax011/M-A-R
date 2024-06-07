@@ -3,16 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
-
 
     <RelativeLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/blue">
-
+        android:layout_height="wrap_content"
+        android:background="@color/blue_white">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -34,7 +32,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="325dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
@@ -43,8 +41,7 @@
             android:padding="16dp"
             app:cardCornerRadius="25dp"
             android:layout_below="@id/imageView"
-            android:layout_centerHorizontal="true"
-            >
+            android:layout_centerHorizontal="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,17 +53,14 @@
                     android:id="@+id/text_intro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_below="@id/imageView"
+                    android:textColor="@android:color/white"
                     android:layout_marginTop="10dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
                     android:textSize="16sp">
                 </TextView>
 
-
                 <Button
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -76,11 +70,100 @@
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
                     app:shapeAppearanceOverlay="@style/RoundedButton">
-
                 </Button>
-
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/text_final"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="25dp"
+            android:paddingStart="16dp"
+            android:layout_below="@id/cardView"
+            android:paddingEnd="16dp"
+            android:textSize="16sp">
+        </TextView>
+        <TextView
+            android:id="@+id/text_complement_final"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/text_final"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="16sp">
+        </TextView>
+
+        <!-- Redes Sociais -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Siga-nos nas redes sociais:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_below="@id/text_complement_final"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/text_complement_final"
+            android:layout_marginTop="8dp">
+
+            <!-- Link para Facebook -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/facebook_icon"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Link para Twitter -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/twitter_icon"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Link para Instagram -->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/instagram_icon"
+                android:layout_marginEnd="8dp"/>
+        </LinearLayout>
+
+        <!-- Informações de Contato -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entre em contato conosco:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_below="@id/text_complement_final"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: contato@exemplo.com"
+            android:textSize="14sp"
+            android:layout_below="@id/text_complement_final"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone: (XX) XXXX-XXXX"
+            android:textSize="14sp"
+            android:layout_below="@id/text_complement_final"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"/>
+
     </RelativeLayout>
 </ScrollView>

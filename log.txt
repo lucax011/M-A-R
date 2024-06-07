@@ -1,0 +1,120 @@
+commit 1afb182b9452badbfbdf21426bb57e1763b7ae0d
+Author: Lucas <csdg6924@gmail.com>
+Date:   Thu Jun 6 21:42:51 2024 -0300
+
+    atualizando interface
+
+ app/src/main/AndroidManifest.xml                   |  83 +++++-----
+ app/src/main/java/com/example/mar/MainActivity.kt  |   4 +-
+ .../res/drawable/rounded_edittext_background.xml   |  10 +-
+ app/src/main/res/layout/login_main.xml             | 182 ++++++++++-----------
+ app/src/main/res/values/colors.xml                 |   1 +
+ 5 files changed, 141 insertions(+), 139 deletions(-)
+
+commit e139fcd313e143bca5dc2d8687e84bea0875f306
+Author: Lucas <csdg6924@gmail.com>
+Date:   Thu Jun 6 21:12:23 2024 -0300
+
+    Atualizando layout, inflando menus, alterando labels e colors
+
+ app/build.gradle.kts                               |  7 +-
+ app/src/main/AndroidManifest.xml                   | 21 ++++-
+ app/src/main/java/com/example/mar/LoginActivity.kt | 41 ++++++++++
+ app/src/main/java/com/example/mar/MainActivity.kt  | 79 ++++++++++++++++---
+ .../main/java/com/example/mar/RegisterActivity.kt  | 40 ++++++++++
+ .../res/drawable/baseline_arrow_forward_24.xml     |  5 ++
+ .../res/drawable/rounded_edittext_background.xml   |  6 ++
+ app/src/main/res/layout/activity_main.xml          | 91 ++++------------------
+ app/src/main/res/layout/login_main.xml             | 18 ++---
+ app/src/main/res/layout/register_main.xml          | 24 +++---
+ app/src/main/res/values-night/themes.xml           | 10 ++-
+ app/src/main/res/values/colors.xml                 |  9 +--
+ app/src/main/res/values/strings.xml                |  2 +-
+ app/src/main/res/values/style.xml                  | 10 +++
+ app/src/main/res/values/themes.xml                 |  2 +-
+ 15 files changed, 244 insertions(+), 121 deletions(-)
+
+commit e5c0d6a0c3096db31646b30b841b378fd4ffa09e
+Author: Lucas <csdg6924@gmail.com>
+Date:   Thu Jun 6 20:20:33 2024 -0300
+
+    Atualddaddasdawdsdwadsai
+
+ .idea/deploymentTargetSelector.xml            |  10 ++
+ .idea/vcs.xml                                 |   6 ++
+ app/src/main/res/drawable/bg_aboutmain.png    | Bin 0 -> 81829 bytes
+ app/src/main/res/drawable/bg_activitymain.png | Bin 0 -> 100628 bytes
+ app/src/main/res/drawable/lighthouse.png      | Bin 0 -> 55097 bytes
+ app/src/main/res/drawable/logo.png            | Bin 0 -> 3119 bytes
+ app/src/main/res/drawable/photo_aboutmain.png | Bin 0 -> 51654 bytes
+ app/src/main/res/drawable/rounded_menu_24.png | Bin 0 -> 330 bytes
+ app/src/main/res/layout/activity_main.xml     | 148 ++++++++++++++++++++++++--
+ app/src/main/res/layout/login_main.xml        |  92 ++++++++++++++++
+ app/src/main/res/layout/register_main.xml     | 115 ++++++++++++++++++++
+ app/src/main/res/menu/login_menu.xml          |  10 ++
+ app/src/main/res/menu/nav_menu.xml            |  23 ++++
+ app/src/main/res/menu/register_menu.xml       |  10 ++
+ app/src/main/res/values/colors.xml            |   8 ++
+ app/src/main/res/values/strings.xml           |  10 +-
+ app/src/main/res/values/themes.xml            |   2 +
+ 17 files changed, 422 insertions(+), 12 deletions(-)
+
+commit 614c2e55086460292e6d2b7db4cd59b952be61d1
+Author: lucas <101607932+lucax011@users.noreply.github.com>
+Date:   Thu Jun 6 19:58:11 2024 -0300
+
+    Create README.md
+
+ README.md | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+
+commit f49f74aee56d020a95289f96d1b4cb79cb396da2
+Author: Lucas <csdg6924@gmail.com>
+Date:   Thu Jun 6 19:49:24 2024 -0300
+
+    iniciando projeto no android studio view vazia
+
+ .gitignore                                         |  15 ++
+ .idea/.gitignore                                   |   3 +
+ .idea/compiler.xml                                 |   6 +
+ .idea/gradle.xml                                   |  18 ++
+ .idea/kotlinc.xml                                  |   6 +
+ .idea/migrations.xml                               |  10 ++
+ .idea/misc.xml                                     |  14 ++
+ app/.gitignore                                     |   1 +
+ app/build.gradle.kts                               |  48 ++++++
+ app/proguard-rules.pro                             |  21 +++
+ .../com/example/mar/ExampleInstrumentedTest.kt     |  24 +++
+ app/src/main/AndroidManifest.xml                   |  26 +++
+ app/src/main/java/com/example/mar/MainActivity.kt  |  20 +++
+ .../main/res/drawable/ic_launcher_background.xml   | 170 +++++++++++++++++++
+ .../main/res/drawable/ic_launcher_foreground.xml   |  30 ++++
+ app/src/main/res/layout/activity_main.xml          |  19 +++
+ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml |   6 +
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |   6 +
+ app/src/main/res/mipmap-hdpi/ic_launcher.webp      | Bin 0 -> 1404 bytes
+ .../main/res/mipmap-hdpi/ic_launcher_round.webp    | Bin 0 -> 2898 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher.webp      | Bin 0 -> 982 bytes
+ .../main/res/mipmap-mdpi/ic_launcher_round.webp    | Bin 0 -> 1772 bytes
+ app/src/main/res/mipmap-xhdpi/ic_launcher.webp     | Bin 0 -> 1900 bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.webp   | Bin 0 -> 3918 bytes
+ app/src/main/res/mipmap-xxhdpi/ic_launcher.webp    | Bin 0 -> 2884 bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.webp  | Bin 0 -> 5914 bytes
+ app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp   | Bin 0 -> 3844 bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.webp | Bin 0 -> 7778 bytes
+ app/src/main/res/values-night/themes.xml           |   7 +
+ app/src/main/res/values/colors.xml                 |   5 +
+ app/src/main/res/values/strings.xml                |   3 +
+ app/src/main/res/values/themes.xml                 |   9 +
+ app/src/main/res/xml/backup_rules.xml              |  13 ++
+ app/src/main/res/xml/data_extraction_rules.xml     |  19 +++
+ .../test/java/com/example/mar/ExampleUnitTest.kt   |  17 ++
+ build.gradle.kts                                   |   5 +
+ gradle.properties                                  |  23 +++
+ gradle/libs.versions.toml                          |  26 +++
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 59203 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 185 +++++++++++++++++++++
+ gradlew.bat                                        |  89 ++++++++++
+ settings.gradle.kts                                |  23 +++
+ 43 files changed, 873 insertions(+)
