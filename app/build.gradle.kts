@@ -6,7 +6,12 @@ plugins {
 android {
     namespace = "com.example.mar"
     compileSdk = 34
-
+    viewBinding {
+        enable = true
+    }
+    dataBinding {
+        enable = true
+    }
     defaultConfig {
         applicationId = "com.example.mar"
         minSdk = 24

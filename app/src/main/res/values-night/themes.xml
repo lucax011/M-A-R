@@ -1,7 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.MAR" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
-    </style>
+            <!-- Customize your light theme here. -->
+            <item name="colorPrimary">@color/blue</item>
+            <item name="android:actionOverflowButtonStyle">@drawable/rounded_menu_24</item>
+            <item name="android:src">@drawable/rounded_menu_24</item>
+        </style>
+
+        <style name="Theme.MAR" parent="Base.Theme.MAR" />
 </resources>
