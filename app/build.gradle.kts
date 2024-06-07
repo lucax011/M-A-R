@@ -12,6 +12,9 @@ android {
     dataBinding {
         enable = true
     }
+    viewBinding {
+        enable = true
+    }
     defaultConfig {
         applicationId = "com.example.mar"
         minSdk = 24

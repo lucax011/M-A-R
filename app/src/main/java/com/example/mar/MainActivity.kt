@@ -13,8 +13,10 @@ import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import com.example.mar.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,115 +28,58 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar) // Define a toolbar como a action bar
+        val toolbar: Toolbar = binding.toolbarLayout.toolbar
+        setSupportActionBar(toolbar)// Define a toolbar como a action bar
 
-
+        // Estilizar os textos
         val textIntroElement = findViewById<TextView>(R.id.text_intro)
-
-        // Texto normal
-        val textoNormalIntro = "Na MAR, você pode facilmente marcar áreas marítimas para pesca autorizada, identificar zonas de risco e locais com grande acúmulo de lixo."
-
-        // Texto em negrito
-        val textoNegritoIntro = "Tudo isso de forma rápida, sem complicações e totalmente gratuita, direto pelo app"
-
-        // Concatenando o texto normal com o texto em negrito
-        val textoCompletoIntro = textoNormalIntro + textoNegritoIntro
-
-        // Criando uma SpannableString
-        val spannableStringIntro = SpannableString(textoCompletoIntro)
-
-        // Definindo o estilo negrito apenas para a última linha
-        spannableStringIntro.setSpan(
-            StyleSpan(Typeface.BOLD),
-            textoNormalIntro.length + 1,
-            textoCompletoIntro.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        spannableStringIntro.setSpan(
-            ForegroundColorSpan(ContextCompat.getColor(this, R.color.orange)),
-            textoNormalIntro.length,
-            textoCompletoIntro.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        spannableStringIntro.setSpan(
-                ForegroundColorSpan(Color.WHITE),
-        0,
-        textoNormalIntro.length,
-        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-
         val textFinalElement = findViewById<TextView>(R.id.text_final)
-
-        // Texto normal
-        val textoNormalFinal = "Na MAR, você pode facilmente marcar áreas marítimas para pesca autorizada,"
-        // Texto em negrito
-        val textoNegritoFinal =   " identificar zonas de risco e locais com grande acúmulo de lixo."
-
-        // Concatenando o texto normal com o texto em negrito
-        val textoCompletoFinal = textoNormalFinal + textoNegritoFinal
-
-        // Criando uma SpannableString
-        val spannableStringFinal = SpannableString(textoCompletoFinal)
-
-        // Definindo o estilo negrito apenas para a última linha
-        spannableStringFinal.setSpan(
-            StyleSpan(Typeface.BOLD),
-            textoNormalFinal.length + 1,
-            textoCompletoFinal.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        spannableStringFinal.setSpan(
-            ForegroundColorSpan(ContextCompat.getColor(this, R.color.orange)),
-            textoNormalFinal.length,
-            textoCompletoFinal.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-        spannableStringFinal.setSpan(
-            ForegroundColorSpan(Color.WHITE),
-            0,
-            textoNormalFinal.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
         val textFinalComplementElement = findViewById<TextView>(R.id.text_complement_final)
 
-        // Texto normal
-        val textoNormalComplementFinal = "Origem terrestre do lixo marinho é uma realidade triste."
-        // Texto em negrito
-        val textoNegritoComplementFinal =   "Adotemos práticas sustentáveis para proteger os oceanos e seus recursos."
-
-        // Concatenando o texto normal com o texto em negrito
-        val textoCompletoComplementFinal = textoNormalComplementFinal + textoNegritoComplementFinal
-
-        // Criando uma SpannableString
-        val spannableStringComplementFinal = SpannableString(textoCompletoComplementFinal)
-
-        // Definindo o estilo negrito apenas para a última linha
-        spannableStringComplementFinal.setSpan(
-            StyleSpan(Typeface.BOLD),
-            textoNormalComplementFinal.length + 1,
-            textoCompletoComplementFinal.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        val textoIntro = Pair(
+            "Na MAR, você pode facilmente marcar áreas marítimas para pesca autorizada, identificar zonas de risco e locais com grande acúmulo de lixo.",
+            "Tudo isso de forma rápida, sem complicações e totalmente gratuita, direto pelo app"
         )
-        spannableStringComplementFinal.setSpan(
-            ForegroundColorSpan(ContextCompat.getColor(this, R.color.orange)),
-            textoNormalComplementFinal.length,
-            textoCompletoComplementFinal.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        val textoFinal = Pair(
+            "Na MAR, você pode facilmente marcar áreas marítimas para pesca autorizada,",
+            " identificar zonas de risco e locais com grande acúmulo de lixo."
         )
-        spannableStringComplementFinal.setSpan(
+        val textoFinalComplement = Pair(
+            "Origem terrestre do lixo marinho é uma realidade triste.",
+            "Adotemos práticas sustentáveis para proteger os oceanos e seus recursos."
+        )
+
+        // Aplicar estilo
+        textIntroElement.text = getStyledText(textoIntro.first, textoIntro.second)
+        textFinalElement.text = getStyledText(textoFinal.first, textoFinal.second)
+        textFinalComplementElement.text = getStyledText(textoFinalComplement.first, textoFinalComplement.second)
+    }
+
+    private fun getStyledText(normalText: String, boldText: String): SpannableString {
+        val fullText = normalText + boldText
+        val spannableString = SpannableString(fullText)
+
+        // Aplicar estilo
+        spannableString.setSpan(
             ForegroundColorSpan(Color.WHITE),
             0,
-            textoNormalComplementFinal.length,
+            normalText.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        spannableString.setSpan(
+            StyleSpan(Typeface.BOLD),
+            normalText.length,
+            fullText.length,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
+        spannableString.setSpan(
+            ForegroundColorSpan(ContextCompat.getColor(this, R.color.orange)),
+            normalText.length,
+            fullText.length,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         )
 
-
-
-
-        // Definindo o texto estilizado para o TextView
-        textIntroElement.text = spannableStringIntro
-        textFinalElement.text = spannableStringFinal
-        textFinalComplementElement.text= spannableStringComplementFinal
+        return spannableString
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
