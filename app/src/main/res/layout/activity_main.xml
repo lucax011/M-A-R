@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/blue_white"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/main"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue_white">
+        android:orientation="vertical">
 
+        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -21,15 +22,16 @@
             app:title="@string/app_name"
             app:titleTextColor="@color/orange" />
 
+        <!-- Imagem -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/bg_activitymain"
-            android:layout_below="@id/toolbar"
-            android:layout_marginTop="10dp"
-            android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            android:layout_marginTop="10dp" />
 
+        <!-- CardView -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
@@ -39,9 +41,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="10dp"
             android:padding="16dp"
-            app:cardCornerRadius="25dp"
-            android:layout_below="@id/imageView"
-            android:layout_centerHorizontal="true">
+            app:cardCornerRadius="25dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,6 +49,7 @@
                 android:background="@color/blue"
                 android:orientation="vertical">
 
+                <!-- Introdução -->
                 <TextView
                     android:id="@+id/text_intro"
                     android:layout_width="match_parent"
@@ -57,9 +58,9 @@
                     android:layout_marginTop="10dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:textSize="16sp">
-                </TextView>
+                    android:textSize="16sp"/>
 
+                <!-- Botão -->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -69,34 +70,39 @@
                     android:text="@string/button_More"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"
-                    app:shapeAppearanceOverlay="@style/RoundedButton">
-                </Button>
+                    app:shapeAppearanceOverlay="@style/RoundedButton"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-        <TextView
-            android:id="@+id/text_final"
+
+        <!-- Texto final -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_marginTop="25dp"
-            android:paddingStart="16dp"
-            android:layout_below="@id/cardView"
-            android:paddingEnd="16dp"
-            android:textSize="16sp">
-        </TextView>
-        <TextView
-            android:id="@+id/text_complement_final"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:layout_below="@id/text_final"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textSize="16sp">
-        </TextView>
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/text_final"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/text_complement_final"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
 
         <!-- Redes Sociais -->
         <TextView
@@ -105,31 +111,32 @@
             android:text="Siga-nos nas redes sociais:"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:layout_below="@id/text_complement_final"
-            android:layout_marginTop="16dp"/>
+            android:textColor="@color/orange"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="75dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@id/text_complement_final"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="75dp">
 
-            <!-- Link para Facebook -->
+            <!-- Facebook -->
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/facebook_icon"
                 android:layout_marginEnd="8dp"/>
 
-            <!-- Link para Twitter -->
+            <!-- Twitter -->
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:src="@drawable/twitter_icon"
                 android:layout_marginEnd="8dp"/>
 
-            <!-- Link para Instagram -->
+            <!-- Instagram -->
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -142,28 +149,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Entre em contato conosco:"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:layout_below="@id/text_complement_final"
-            android:layout_marginTop="16dp"/>
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="75dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email: contato@exemplo.com"
             android:textSize="14sp"
-            android:layout_below="@id/text_complement_final"
             android:layout_marginTop="8dp"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="75dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telefone: (XX) XXXX-XXXX"
             android:textSize="14sp"
-            android:layout_below="@id/text_complement_final"
             android:layout_marginTop="8dp"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="75dp"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 </ScrollView>
