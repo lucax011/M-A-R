@@ -19,14 +19,15 @@
             layout="@layout/toolbar_layout" />
 
         <!-- Imagem -->
+
+        <!-- CardView -->
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/bg_activitymain"
-            android:adjustViewBounds="true" />
+            android:adjustViewBounds="true"
+            android:src="@drawable/bg_activitymain" />
 
-        <!-- CardView -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"

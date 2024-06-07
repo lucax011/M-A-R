@@ -38,15 +38,15 @@ class MainActivity : AppCompatActivity() {
 
         val textoIntro = Pair(
             "Na MAR, você pode facilmente marcar áreas marítimas para pesca autorizada, identificar zonas de risco e locais com grande acúmulo de lixo.",
-            "Tudo isso de forma rápida, sem complicações e totalmente gratuita, direto pelo app"
+            "\n Tudo isso de forma rápida, sem complicações e totalmente gratuita, direto pelo app"
         )
         val textoFinal = Pair(
-            "Na MAR, você pode facilmente marcar áreas marítimas para pesca autorizada,",
-            " identificar zonas de risco e locais com grande acúmulo de lixo."
+             "Criamos um método de coleta de informações, mapeamento e preservação de nosso mar.",
+            "\n M A R : Monitoramento de areas de risco"
         )
         val textoFinalComplement = Pair(
             "Origem terrestre do lixo marinho é uma realidade triste.",
-            "Adotemos práticas sustentáveis para proteger os oceanos e seus recursos."
+            "\n Adotemos práticas sustentáveis para proteger os oceanos e seus recursos."
         )
 
         // Aplicar estilo
