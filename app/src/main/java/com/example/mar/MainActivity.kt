@@ -43,10 +43,12 @@ class MainActivity : AppCompatActivity() {
         // Definindo o estilo negrito apenas para a última linha
         spannableStringIntro.setSpan(
             StyleSpan(Typeface.BOLD),
-            textoNormalIntro.length,
+            textoNormalIntro.length + 1,
             textoCompletoIntro.length,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         )
+        // Definindo o texto estilizado para o TextView
+        textIntroElement.text = spannableStringIntro
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
