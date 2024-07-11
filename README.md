@@ -1,4 +1,4 @@
-# MAR - Monitoramento de Áreas de Recursos
+# MAR - Monitoramento de Áreas de Risco
 Bem-vindo ao projeto MAR! Este aplicativo visa auxiliar pescadores na identificação e seleção de áreas de pesca permitida, bem como na marcação de áreas de pesca clandestina e locais com acúmulo de lixo. Nosso objetivo é promover a sustentabilidade e proteção dos recursos marinhos.
 
 # Funcionalidades
