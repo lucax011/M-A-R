@@ -2,8 +2,6 @@
 
 App para ajudar pescadores a identificar áreas de pesca permitida e a marcar pontos de pesca clandestina e de acúmulo de lixo no mar. O objetivo é promover a sustentabilidade e a proteção dos recursos marinhos.
 
-Existe também uma versão em Flutter: [mar_dart](https://github.com/lucax011/mar_dart).
-
 ## Proposta
 
 - **Marcação de áreas:** pesca permitida, zonas de risco e acúmulo de lixo
